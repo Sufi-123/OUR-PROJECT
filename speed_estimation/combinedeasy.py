@@ -70,7 +70,11 @@ def license_plate(frame,y3,y4,x3,x4,id):
                 preprocessed_image = preprocess_image(cropped_image)
             
                 # Perform OCR on the preprocessed number plate image
-                number_plate_text = perform_ocr(preprocessed_image)
+                classification= r""
+                if characcter=="english":
+                    number_plate_text = perform_ocr(preprocessed_image)
+                else:
+                    
                 prev_id = None
                 best_plate = None
                 # Check if the recognized plate is different from the previous plate

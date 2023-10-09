@@ -26,11 +26,11 @@ print (mac_address)
 print("EXISTING DATA")
 
  # Load the number plate detection model
-best_path= r'models\best.pt'
+best_path= r'/home/rubi/Desktop/OUR-PROJECT/models/best.pt'
 number_plate_model = YOLO(best_path)
 
 # Load the character recognition model
-model= load_model(r'models\model.h5')
+model= load_model(r'/home/rubi/Desktop/OUR-PROJECT/models/model.h5')
 
 # Preprocess the number plate region for OCR
 def preprocess_image(image,scale_factor=3,elongate_factor=3.5):
@@ -290,9 +290,9 @@ def count_vehicles(counter, counter1):
     return vehicle_down_count, vehicle_up_count
 
 def process_video():
-    video_path = r'speed_estimation\test_vid\100.mp4'
-    model_path = 'models\yolov8s.pt'
-    class_list_path = r'speed_estimation\coco.txt'
+    video_path = r'/home/rubi/Desktop/OUR-PROJECT/speed_estimation/test_vid/100.mp4'
+    model_path = r'/home/rubi/Desktop/OUR-PROJECT/models/yolov8s.pt'
+    class_list_path = r'/home/rubi/Desktop/OUR-PROJECT/speed_estimation/coco.txt'
    
     model = YOLO(model_path)
     cap = cv2.VideoCapture(video_path)

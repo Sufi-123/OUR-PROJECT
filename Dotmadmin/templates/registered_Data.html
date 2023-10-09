@@ -1,0 +1,26 @@
+{% extends 'dotm_Dashboard.html' %}
+
+{% block body_block %}
+
+<div class="container">
+
+    <table>
+      <tr>
+
+        <th>Registered License Plate</th>
+        <th>Registered Number</th>
+
+      </tr>
+      {% for register in Registered_List %}
+      <tr>
+
+        <td>{{register.registeredln}}</td>
+        <td>{{register.registeredno}}</td>
+
+      </tr>
+      {% endfor %}
+    </table>
+
+  </div>
+
+{% endblock %}

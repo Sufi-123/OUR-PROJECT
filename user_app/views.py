@@ -106,4 +106,3 @@ def get_records(request):
     serializer = RecordSerializer(records, many=True)
     return JsonResponse(serializer.data, safe=False)
 
-
